@@ -1,0 +1,303 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ProductNo</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>InternalName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+        </Field>
+        <Field>
+            <Name>IsModelProduct</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+        </Field>
+        <Field>
+            <Name>BaseUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Specify the code of a unit of measure as defined in the metadata.
+
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>ProductDiscountGroupCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>AllowInvoiceDiscount</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+        </Field>
+        <Field>
+            <Name>UnitPrice</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>UnitCost</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>SizeCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+Specify the code of a size as defined in the metadata. 
+I.e. sizes of a t-shirt: `XS`, `S`, `M`, `L`, `XL`.
+
+Alternatively, a size can be specified as a measurement with a decimal value and a unit of measure.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Size</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>SizeUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>ColorCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>Specify the code of a color as defined in the metadata.</Description>
+        </Field>
+        <Field>
+            <Name>MainVendorCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>MainVendorProductNo</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>EAN</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>20</MaximumLength>
+            <Description><![CDATA[
+The EAN-13 barcode digits. An EAN-13 barcode (originally European Article Number, but now
+renamed International Article Number even though the abbreviation EAN has been retained) is a 13 digit
+(12 data and 1 check) barcoding standard.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>ProducerProductNo</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>LeadTimeCalculation</Name>
+            <Type>smallint</Type>
+            <Description>The average delivery time in days for the main vendor for this product.</Description>
+        </Field>
+        <Field>
+            <Name>MOQ</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>IOQ</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>UnitListPrice</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>GrossWeight</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>GrossWeightUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>Specify the code of a unit of measure as defined in the metadata.</Description>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>NetWeight</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>NetWeightUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>Specify the code of a unit of measure as defined in the metadata.</Description>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>UnitVolume</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>UnitVolumeUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>Specify the code of a unit of measure as defined in the metadata.</Description>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>Durability</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>15</MaximumLength>
+            <Description><![CDATA[
+Contains the format of an xsd duration type without the time part (max = 100 years). Fex 'P0Y3M20D' = 3 months, 20 days.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>TariffNo</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+            <Description><![CDATA[
+Intrastat code of the product. Intrastat is the system for collecting information and producing statistics on the trade in goods between countries of the European Union (EU).
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>CountryPurchased_ISO</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>2</MaximumLength>
+            <Description><![CDATA[
+The two-letter ALPHA-2 ISO 3166 notation of the country code.
+More info at [www.iso.org](https://www.iso.org/iso-3166-country-codes.html).
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>CountryOrigine_ISO</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>2</MaximumLength>
+            <Description><![CDATA[
+The two-letter ALPHA-2 ISO 3166 notation of the country code.
+More info at [www.iso.org](https://www.iso.org/iso-3166-country-codes.html).
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Online</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+        </Field>
+        <Field>
+            <Name>VATBusinessPostingGroupCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>SalesUnitofMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Specify the code of a unit of measure as defined in the metadata.
+
+Consider using `Properties` or `ProductMeasurement` instead.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>PriceOnRequest</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+        </Field>
+        <Field>
+            <Name>PromoTypeID</Name>
+            <Type>bit</Type>
+            <Description><![CDATA[
+Specify the ID of a promotion type as defined in the metadata.
+
+Values supported by NatchOS:
+- `1` = promotion
+- `2` = liquidation
+- `3` = spotlight
+- `4` = bestseller
+
+Custom types should have a value greater than 100.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Product_TransportCost</Name>
+            <IsRequired>False</IsRequired>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+            <Description>The transport cost for this product.</Description>
+        </Field>
+        <Field>
+            <Name>Product_MinimumAmountFreeShipping</Name>
+            <IsRequired>False</IsRequired>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>Product_TransferLeadTimeInDays</Name>
+            <IsRequired>False</IsRequired>
+            <Type>smallint</Type>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

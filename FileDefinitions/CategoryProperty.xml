@@ -1,0 +1,71 @@
+<FileDefinition version="2">
+    <Fields>
+        <Description><![CDATA[
+Property settings for a property under a specific category. 
+These settings take precedence over the settings for single property.
+        ]]></Description>
+        <Field iskey="1">
+            <Name>CategoryCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field iskey="1">
+            <Name>PropertyCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>IsVisible</Name>
+            <Type>bit</Type>
+            <IsRequired>True</IsRequired>
+            <Description><![CDATA[
+If true, property is visible in listed properties of product for this category.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>IsFilter</Name>
+            <Type>bit</Type>
+            <IsRequired>True</IsRequired>
+            <Description><![CDATA[
+If true, property can be used in the asset-filter when this category is selected.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>IsSearchable</Name>
+            <Type>bool</Type>
+            <IsRequired>True</IsRequired>
+            <Description><![CDATA[
+If true, this field should be included in the search index (e.g. Full-Text Search in SQL or Azure Search).
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>OrderValue</Name>
+            <Type>int</Type>
+            <Description>Sort-order of the property for a product under this category.</Description>
+        </Field>
+        <Field>
+            <Name>PropertyFilterTypeID</Name>
+            <Type>tinyint</Type>
+            <Description><![CDATA[
+Filter type of the property:
+- `1`: Intersect --> evaluated as an `AND` operator within the property values; selecting more options within the property may reduce results
+- `2`: Union --> evaluated as an `OR` operator within the property values; selecting more options within the property may increase results
+- `3`: Range --> property can be filtered as a range of numerical values, defining minimum and/or maximum
+      ]]></Description>
+            <Default>1</Default>
+            <FixedValueList>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </FixedValueList>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

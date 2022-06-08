@@ -1,0 +1,51 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ProductName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ProductSearchName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+        </Field>
+        <Field>
+            <Name>FreightType</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>1000</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ProductDescription</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>4000</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Comment</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>1000</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Synonyms</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>1000</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>LCID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>int</Type>
+            <Description>The locale identifier, e.g. `2067` for Dutch (Belgium) [nl-BE].</Description>
+        </Field>
+        <Field>
+            <Name>MiscML</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+    </Fields>
+</FileDefinition>

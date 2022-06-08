@@ -1,0 +1,47 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field>
+            <Name>CategoryTypeCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>CategoryCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>CategoryName</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+        </Field>
+        <Field>
+            <Name>CategoryDescription</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>512</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>LCID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>int</Type>
+            <Description>The locale identifier, e.g. `2067` for Dutch (Belgium) [nl-BE].</Description>
+        </Field>
+        <Field>
+            <Name>MiscML</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Synonymlist</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>1000</MaximumLength>
+            <Description>A list of semicolon-separated synonyms for this category, for this language.</Description>
+            <AltHeaderNames>
+                <Value>Synonyms</Value>
+            </AltHeaderNames>
+        </Field>
+    </Fields>
+</FileDefinition>

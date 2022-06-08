@@ -1,0 +1,76 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field>
+            <Name>CategoryTypeCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+The type of the category structure, e.g. NAVIGATION or BRAND.
+Predefined by Natch as a readonly category at the root (level 0).
+      ]]></Description>
+        </Field>
+        <Field iskey="1">
+            <Name>CategoryCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ParentCategoryCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+The code of the parent category.
+Will contain the `CategoryTypeCode` for categories at highest level or non hierarchical structure.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>InternalName</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+        </Field>
+        <Field>
+            <Name>InternalDescription</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>512</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Level</Name>
+            <Type>int</Type>
+            <Description><![CDATA[
+The level of the category in the tree, starting at value `1`.
+If the structure is not hierarchical, use value `1`.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>OrigOrderValue</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+Defines the order in which the categories under a node are placed.
+This is a text field, sorting is alphabetical.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>AutoCompleteWeight</Name>
+            <Type>int</Type>
+            <Description><![CDATA[
+The optional weight of the category to calculate the score in search results of the generic autocomplete.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>Online</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

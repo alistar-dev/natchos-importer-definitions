@@ -1,0 +1,78 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field iskey="1">
+            <Name>ProductCode1</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>The origin product.</Description>
+        </Field>
+        <Field iskey="1">
+            <Name>ProductRelationType</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>50</MaximumLength>
+            <FixedValueList>
+                <Value>Basic</Value>
+                <Value>SuggestedIncludes</Value>
+                <Value>CustomersWhoBoughtThisAlsoBought</Value>
+                <Value>FrequentlyBoughtTogetherWith</Value>
+                <Value>HasAccessory</Value>
+                <Value>HasAlternative</Value>
+                <Value>IsInSameSeries</Value>
+                <Value>IsModelOf</Value>
+                <Value>IsReplacementOf</Value>
+                <Value>IsVariantOf</Value>
+                <Value>MandatoryIncludes</Value>
+                <Value>Replacement</Value>
+                <Value>TemporaryHasAlternative</Value>
+            </FixedValueList>
+            <Description><![CDATA[
+Values supported by NatchOS:
+
+- `Basic`: The related product has a basic relation to the origin product, without any specific meaning.
+- `SuggestedIncludes`: The related product is a highly recommended accessory for the origin product.
+- `CustomersWhoBoughtThisAlsoBought`: The related product is often bought by the same customer who bought origin product.
+- `FrequentlyBoughtTogetherWith`: The related product appears frequently in the same order as the origin product.
+- `HasAccessory`: The related product is an accessory of the origin product.
+- `HasAlternative`: The related product is an alternative to the origin product.
+- `IsInSameSeries`: The product belongs to the same series of products as the related product.
+- `IsModelOf`: The origin product is the model for the related product.
+- `IsReplacementOf`: The origin product is a replacement of the related product. This is the opposite of `Replacement`.
+- `IsVariantOf`: The origin product is a variant for the related product (model).
+- `MandatoryIncludes`: The related product is mandatory included in a sale of origin product.
+- `Replacement`: The related product is a replacement for the origin product. This is the opposite of `IsReplacementOf`.
+- `TemporaryHasAlternative`: Time bound (by range) version of HasAlternative.
+    ]]></Description>
+        </Field>
+        <Field iskey="1">
+            <Name>ProductCode2</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>The related product.</Description>
+        </Field>
+        <Field>
+            <Name>StartDate</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>10</MaximumLength>
+            <Description><![CDATA[
+Required for time-bound relations (`TemporaryHasAlternative`). Must be empty for other relations.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>StopDate</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>10</MaximumLength>
+            <Description><![CDATA[
+Required for time-bound relations (`TemporaryHasAlternative`). Must be empty for other relations.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

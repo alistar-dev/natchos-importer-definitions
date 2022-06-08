@@ -1,0 +1,34 @@
+<FileDefinition version="2">
+    <Description><![CDATA[
+Link between product and category.
+A product can be linked to multiple categories, even of the same category type, if import settings allow it.
+Caution: Action field only supports `I` or `D`, not `U`.
+  ]]></Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>CategoryTypeCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>The type of the category structure, e.g. NAVIGATION or BRAND.</Description>
+        </Field>
+        <Field iskey="1">
+            <Name>CategoryCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

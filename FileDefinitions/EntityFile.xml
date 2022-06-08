@@ -1,0 +1,74 @@
+<FileDefinition version="2">
+    <Description><![CDATA[
+Defines a link between a physical file that was uploaded and an entity.
+Replace `entity` in `entity_file.txt` by the actual entity name, e.g. `product_file.txt`.
+Supported entities: Person, Customer, DocumentHeader, Product, Category, Warehouse.
+  ]]></Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>EntityCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <AltHeaderNames>
+                <Value>CategoryCode</Value>
+                <Value>CustomerCode</Value>
+                <Value>DocumentHeaderCode</Value>
+                <Value>PersonCode</Value>
+                <Value>ProductCode</Value>
+                <Value>WarehouseCode</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field iskey="1">
+            <Name>FilePath</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+            <Description><![CDATA[
+This determines the file type and must be a known value within NatchOS, configured by Natch.
+
+**A `FileType` for External storage (preferred):**
+  No restrictions. E.g. `\categoryimage`, `\productimage`, `\producthighresolution`, `ProductManualLink`.
+
+**A `FilePath` for SQL storage (legacy):**
+  The path of the file without the filename.
+  A leading \ is mandatory, a trailing \ is not allowed.
+  Only one level is allowed.
+  E.g. `\productimages`, `\brandlogo`.
+      ]]></Description>
+            <AltHeaderNames>
+                <Value>FileType</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field iskey="1">
+            <Name>FileName</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>1024</MaximumLength>
+            <Description><![CDATA[
+**A `URL` for External storage (preferred):**
+  An absolute or relative URL. e.g. `https://pim.natch.be/products/thumbnails/x123987.jpg` or `/products/thumbnails/x123987.jpg`.
+
+**A `FileName` for SQL storage (legacy):**
+  The name or path of the file, e.g. `x123-specs-nl.pdf`.
+  This may include a path relative to FilePath, e.g. `group-a\type-b\productsheet-x123.jpg`.
+      ]]></Description>
+            <AltHeaderNames>
+                <Value>URL</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field iskey="1">
+            <Name>LCID</Name>
+            <Type>int</Type>
+            <Description>The optional locale identifier for the file, e.g. `2067` for Dutch (Belgium) [nl-BE].
+            </Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+            <Description>Can be used to specify the order in which images or files must be displayed.</Description>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

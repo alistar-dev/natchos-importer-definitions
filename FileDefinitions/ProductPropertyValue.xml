@@ -1,0 +1,26 @@
+<FileDefinition version="2">
+    <Description>Assignment of property values to a product.</Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field iskey="1">
+            <Name>PropertyCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>PropertyValueCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <AltHeaderNames>
+                <Value>Value1</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

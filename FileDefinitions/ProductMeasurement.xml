@@ -1,0 +1,72 @@
+<FileDefinition version="2">
+    <Description><![CDATA[
+Defines measurements for products. This is the preferred alternative to some measurement fields in the `Product` entity.
+    ]]></Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>MeasurementTypeID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>tinyint</Type>
+            <FixedValueList>
+                <Value>1</Value>
+                <Value>2</Value>
+                <Value>3</Value>
+                <Value>4</Value>
+                <Value>5</Value>
+                <Value>6</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+                <Value>9</Value>
+                <Value>10</Value>
+                <Value>11</Value>
+                <Value>12</Value>
+                <Value>13</Value>
+            </FixedValueList>
+            <Description><![CDATA[
+Values supported by NatchOS:
+
+- `1`: Base Unit - Unit in which the product is stored (inventory). Requires only the unit of measure. 
+- `2`: Size - Measurement for a generic size/dimension of the product. Requires both the unit of measure and a value.
+- `3`: Gross Weight - Measurement for the gross weight of the product. Requires both the unit of measure and a value.
+- `4`: Net Weight - Measurement for the net weight of the product. Requires both the unit of measure and a value.
+- `5`: Sales Unit - Unit in which the product is sold. Requires only the unit of measure. 
+- `6`: Volume - Measurement for the volume of the product. Requires both the unit of measure and a value.
+- `7`: Overpack Volume - Measurement for the volume of an overpack of the product. Requires both the unit of measure and a value.
+- `8`: Overpack Weight - Measurement for the weight of an overpack of the product. Requires both the unit of measure and a value.
+- `9`: Size Length - Measurement for the length of the product. Requires both the unit of measure and a value.
+- `10`: Size Width - Measurement for the width of the product. Requires both the unit of measure and a value.
+- `11`: Size Height - Measurement for the height of the product. Requires both the unit of measure and a value.
+- `12`: Overpack Unit - Unit of one overpack. Requires only the unit of measure.
+- `13`: Items per Sales Unit - Describes how many items are contained in a single sales unit. Requires both the unit of measure and a value. (I.e. Number of blisters in one package. Product is sold per package.)
+    ]]></Description>
+        </Field>
+        <Field>
+            <Name>UnitOfMeasureCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+The code of the unit of measure.
+    ]]></Description>
+        </Field>
+        <Field>
+            <Name>Amount</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+            <AltHeaderNames>
+                <Value>Value</Value>
+            </AltHeaderNames>
+            <Description><![CDATA[
+The value for the measurement. This is required for some measurement types.
+    ]]></Description>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

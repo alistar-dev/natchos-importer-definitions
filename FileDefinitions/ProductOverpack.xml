@@ -1,0 +1,66 @@
+<FileDefinition version="2">
+    <Description>Defines an overpack for a specific product. Contains weight, volume and units per pack with the unit of
+        measure.
+    </Description>
+    <Fields>
+        <Field>
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>OverpackCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>InternalName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>OverpackWeight</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+        </Field>
+        <Field>
+            <Name>OverpackWeightUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>OverpackVolume</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+        </Field>
+        <Field>
+            <Name>OverpackVolumeUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>UnitsPerPack</Name>
+            <IsRequired>True</IsRequired>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+            <Description>The number of unit in the overpack.</Description>
+        </Field>
+        <Field>
+            <Name>OverpackUnitUnitOfMeasureCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>The unit for the `UnitsPerPack` value.</Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

@@ -1,0 +1,41 @@
+<FileDefinition version="2">
+    <Description>Link between a salesperson and a customer.</Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>CustomerCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>PersonCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>OfficeStaff</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+            <Description>Use 1 for internal/backoffice, 0 for external.</Description>
+        </Field>
+        <Field>
+            <Name>MainSalesPerson</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+            <Description>Only one person can be set as main salesperson per customer.</Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+        </Field>
+        <Field>
+            <Name>StoreID</Name>
+            <Type>smallint</Type>
+            <Default>1</Default>
+            <Description>Required for multi-store environments.</Description>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

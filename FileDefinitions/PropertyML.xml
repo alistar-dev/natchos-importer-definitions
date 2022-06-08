@@ -1,0 +1,32 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field>
+            <Name>PropertyCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>PropertyName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>PropertyDescription</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>512</MaximumLength>
+        </Field>
+        <Field>
+            <Name>LCID</Name>
+            <Type>int</Type>
+            <IsRequired>True</IsRequired>
+            <Description>The locale identifier, e.g. `2067` for Dutch (Belgium) [nl-BE].</Description>
+        </Field>
+        <Field>
+            <Name>MiscML</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+    </Fields>
+</FileDefinition>

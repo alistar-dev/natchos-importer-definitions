@@ -1,0 +1,39 @@
+<FileDefinition version="2">
+    <Description><![CDATA[
+Customer specific price for this product, when ordering the minimum units. 
+For performance reasons this table should not contain more than 2 million records.
+]]></Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>CustomerCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>UnitPrice</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field iskey="1">
+            <Name>MinimumUnits</Name>
+            <IsRequired>True</IsRequired>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

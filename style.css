@@ -1,0 +1,34 @@
+.arrow-button
+{
+	width: 100px;
+	height: 40px;
+}
+
+.center-button
+{
+	margin: auto 0;
+    text-align: center;
+}
+
+.container {
+	padding-right: 0;
+	width: 96%;
+}
+
+.row {
+	margin-right: 0;
+}
+
+.spacer-one {
+	height: 50px;
+}
+
+.ms-label
+{
+	line-height: 32px;
+}
+
+.no-underline
+{
+	text-decoration: none;
+}

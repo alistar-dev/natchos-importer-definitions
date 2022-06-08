@@ -1,0 +1,43 @@
+<FileDefinition version="2">
+    <Description><![CDATA[
+Extra data for an entity. 
+Replace `entity` in `entity_externaldata.txt` by the actual entity name, e.g. `product_externaldata.txt`. 
+Supported entities: Person, Customer, ShippingAddress, Product, Category, Warehouse.
+  ]]></Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>EntityCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <AltHeaderNames>
+                <Value>CategoryCode</Value>
+                <Value>CustomerCode</Value>
+                <Value>DocumentHeaderCode</Value>
+                <Value>PersonCode</Value>
+                <Value>ProductCode</Value>
+                <Value>WarehouseCode</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field iskey="1">
+            <Name>ExternalSourceID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>int</Type>
+        </Field>
+        <Field iskey="1">
+            <Name>LCID</Name>
+            <Type>int</Type>
+            <Description><![CDATA[
+The locale identifier, e.g. `2067` for Dutch (Belgium) [nl-BE].
+Can be used to specify both a local specific record or a neutral record without LCID.
+If there is no record for a specific LCID, NatchOS will fall back to the record without LCID.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <IsRequired>True</IsRequired>
+            <Type>xml</Type>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

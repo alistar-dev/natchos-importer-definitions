@@ -1,0 +1,35 @@
+<FileDefinition version="2">
+    <Description>Defines surcharges of a product.</Description>
+    <Fields>
+        <Field>
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>ProductSurchargeTypeID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>smallint</Type>
+            <Description>Type of surcharge. e.g. 1 is Bebat, 2 is Recupel.</Description>
+        </Field>
+        <Field>
+            <Name>ProductSurchargeQuantity</Name>
+            <Type>smallint</Type>
+            <Description>Multiplier for the `ProductSurchargePrice`, e.g. four batteries per product.</Description>
+        </Field>
+        <Field>
+            <Name>ProductSurchargePrice</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+            <Description>Price for a single surcharge, e.g. for one battery.</Description>
+        </Field>
+        <Field>
+            <Name>Miscellaneous</Name>
+            <Type>json</Type>
+            <MaximumLength>1000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

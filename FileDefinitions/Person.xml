@@ -1,0 +1,204 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field>
+            <Name>CustomerCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ShippingAddressCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>PersonCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>FirstName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>MiddleName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>SurName</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>SearchName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>NickName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>AddressLine1</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+            <Description>**Part of address field set. Required if another field in the set is supplied.**</Description>
+        </Field>
+        <Field>
+            <Name>AddressLine2</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+            <Description>**Part of address field set. Optional.**</Description>
+        </Field>
+        <Field>
+            <Name>ZipCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>20</MaximumLength>
+            <Description>**Part of address field set. Required if another field in the set is supplied.**</Description>
+        </Field>
+        <Field>
+            <Name>City</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+            <Description>**Part of address field set. Required if another field in the set is supplied.**</Description>
+        </Field>
+        <Field>
+            <Name>TerritoryCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>**Part of address field set. Optional.**</Description>
+        </Field>
+        <Field>
+            <Name>CountyCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+**Part of address field set. Optional.**
+Code for a geographical region of a country.
+Not to be confused with country.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Country_ISO</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>2</MaximumLength>
+            <Description><![CDATA[
+**Part of address field set. Required if another field in the set is supplied.**
+The two-letter ALPHA-2 ISO 3166 notation of the country code.
+More info at [www.iso.org](https://www.iso.org/iso-3166-country-codes.html).
+            ]]></Description>
+            <AltHeaderNames>
+                <Value>CountryISO</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field>
+            <Name>SpatialLocation</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>40</MaximumLength>
+            <Description><![CDATA[
+Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.09644,3.83194` for Lochristi, Belgium.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Email</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>320</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Email2</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>320</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Homepage</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>255</MaximumLength>
+        </Field>
+        <Field>
+            <Name>SalesPersonCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Comment</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>1000</MaximumLength>
+        </Field>
+        <Field>
+            <Name>JobTitle</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>OrganizationLevelCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>SalutationCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Initials</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>50</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Gender</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>10</MaximumLength>
+            <FixedValueList>
+                <Value>F</Value>
+                <Value>Female</Value>
+                <Value>M</Value>
+                <Value>Male</Value>
+                <Value></Value>
+            </FixedValueList>
+        </Field>
+        <Field>
+            <Name>Login</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>320</MaximumLength>
+        </Field>
+        <Field>
+            <Name>WebRoleCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+A single code or the value `MULTIPLE` if a WebRolePerson.txt file is supplied with many-to-many combinations.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>LCID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>int</Type>
+            <Description>The locale identifier, e.g. `2067` for Dutch (Belgium) [nl-BE].</Description>
+        </Field>
+        <Field>
+            <Name>TemporaryPersonCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <AltHeaderNames>
+                <Value>TemporaryCode</Value>
+            </AltHeaderNames>
+            <Description><![CDATA[
+The temporary code of the record as created by NatchOS before sending to master data.
+This code must be sent back to update data accordingly.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

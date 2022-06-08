@@ -1,0 +1,33 @@
+<FileDefinition version="2">
+    <Description>Translation for a property value. Only required for textual values, not for numerical.</Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>PropertyCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>PropertyValueCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>LCID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>int</Type>
+            <Description>The locale identifier, e.g. `2067` for Dutch (Belgium) [nl-BE].</Description>
+        </Field>
+        <Field>
+            <Name>TextValueML</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>1000</MaximumLength>
+        </Field>
+        <Field>
+            <Name>MiscML</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+    </Fields>
+</FileDefinition>

@@ -1,0 +1,19 @@
+<FileDefinition version="2">
+    <Description>Link between a person and a web role the person belongs to. A person can have multiple web roles.
+    </Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>WebRoleCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>PersonCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

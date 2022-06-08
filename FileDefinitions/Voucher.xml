@@ -1,0 +1,98 @@
+<FileDefinition version="2">
+    <Description>Specify either `DiscountPercent` or `DiscountAmount`, not both.</Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>VoucherCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>InternalName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Description</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>Identification</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>80</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ValidFrom</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>10</MaximumLength>
+        </Field>
+        <Field>
+            <Name>ValidUntil</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>10</MaximumLength>
+            <AltHeaderNames>
+                <Value>ValidUntill</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field>
+            <Name>DiscountPercent</Name>
+            <Type>decimal</Type>
+            <Precision>5</Precision>
+            <Scale>2</Scale>
+        </Field>
+        <Field>
+            <Name>DiscountAmount</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>MaxDiscountValue</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>MinimumValue</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>VoucherLimitTypeID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>tinyint</Type>
+            <FixedValueList>
+                <Value>1</Value>
+                <Value>2</Value>
+            </FixedValueList>
+            <Description><![CDATA[
+Defines how `MaxAmount` is applied.
+
+- `1` = Global limit
+- `2` = Per user limit
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>MaxAmount</Name>
+            <IsRequired>True</IsRequired>
+            <Type>int</Type>
+            <Description>Maximum number of times a voucher can be used.</Description>
+        </Field>
+        <Field>
+            <Name>Combinable</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

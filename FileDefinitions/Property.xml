@@ -1,0 +1,108 @@
+<FileDefinition version="2">
+    <Description>Property that can be assigned to product. Example: 'Length' or 'Height'.</Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>PropertyCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>InternalName</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>128</MaximumLength>
+            <Description>Internal name of the property. Is used as display text if no translations are provided.
+            </Description>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>PropertyValueTypeID</Name>
+            <Type>tinyint</Type>
+            <Description><![CDATA[
+Data type of the value of the property:
+
+- `1`: Textual value
+- `2`: Numerical value, integer or decimal
+- `4`: Boolean value, simple true/false
+            ]]></Description>
+            <FixedValueList>
+                <value>1</value>
+                <value>2</value>
+                <value>4</value>
+            </FixedValueList>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>PropertyFilterTypeID</Name>
+            <Type>tinyint</Type>
+            <Description><![CDATA[
+Filter type of the property:
+
+- `1`: Intersect --> evaluated as an `AND` operator within the property values; selecting more options
+within the property may reduce results.
+- `2`: Union --> evaluated as an `OR` operator within the property values; selecting more options within
+the property may increase results.
+- `3`: Range --> property can be filtered as a range of numerical values, defining minimum and/or
+maximum.
+
+Supported in our latest search engine.
+            ]]></Description>
+            <FixedValueList>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </FixedValueList>
+            <IsRequired>True</IsRequired>
+        </Field>
+        <Field>
+            <Name>IsVisible</Name>
+            <Type>bit</Type>
+            <IsRequired>True</IsRequired>
+            <Description>If true, property is visible in listed properties of product.</Description>
+            <AltHeaderNames>
+                <Value>ShowAsProductSpecification</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field>
+            <Name>IsFilter</Name>
+            <Type>bit</Type>
+            <IsRequired>True</IsRequired>
+            <Description>If true, property will be available as facet filter for product search.</Description>
+            <AltHeaderNames>
+                <Value>UseAsFilter</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field>
+            <Name>IsSearchable</Name>
+            <Type>bool</Type>
+            <IsRequired>True</IsRequired>
+            <Description>If true, the `TextValueML` or `TextValue` of the `PropertyValue` will be included in the search
+                index.
+            </Description>
+        </Field>
+        <Field>
+            <Name>OrderValue</Name>
+            <Type>int</Type>
+            <Description>Sort order of the property for a product.</Description>
+            <AltHeaderNames>
+                <Value>IncludeInSearchIndex</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field>
+            <Name>PropertyClassCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+Code of the class to which the property belongs.
+
+Example: 'Measurements'.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

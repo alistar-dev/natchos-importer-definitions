@@ -1,0 +1,66 @@
+<FileDefinition version="2">
+    <Description><![CDATA[
+Defines a link between an entity and a store in multi-store implementation.
+Replace `entity` in `entity_store.txt` by the actual entity name, e.g. `product_store.txt`.
+Supported entities: Product.
+  ]]></Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>EntityCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <AltHeaderNames>
+                <Value>ProductCode</Value>
+            </AltHeaderNames>
+        </Field>
+        <Field iskey="1">
+            <Name>StoreID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>smallint</Type>
+        </Field>
+
+        <Field>
+            <Name>Product_TransportCost</Name>
+            <IsRequired>False</IsRequired>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+            <Description>The transport cost for this product.</Description>
+        </Field>
+        <Field>
+            <Name>Product_MinimumAmountFreeShipping</Name>
+            <IsRequired>False</IsRequired>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+        </Field>
+        <Field>
+            <Name>Product_TransferLeadTimeInDays</Name>
+            <IsRequired>False</IsRequired>
+            <Type>smallint</Type>
+        </Field>
+        <Field>
+            <Name>Product_PromoTypeID</Name>
+            <IsRequired>False</IsRequired>
+            <Type>tinyint</Type>
+            <Description><![CDATA[
+Specify the ID of a promotion type as defined in the metadata.
+
+Values supported by NatchOS:
+- `1` = promotion
+- `2` = liquidation
+- `3` = spotlight
+- `4` = bestseller
+
+Custom types should have a value greater than 100.
+      ]]></Description>
+        </Field>
+
+        <Field>
+            <Name>Miscellaneous</Name>
+            <Type>json</Type>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

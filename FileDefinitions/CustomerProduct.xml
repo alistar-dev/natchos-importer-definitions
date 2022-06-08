@@ -1,0 +1,63 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field iskey="1">
+            <Name>CustomerCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>CustomerProductCode</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>Alternate product number by which the customer knows the product.</Description>
+        </Field>
+        <Field>
+            <Name>Ordered</Name>
+            <IsRequired>True</IsRequired>
+            <Type>bit</Type>
+            <Description><![CDATA[
+Indicates whether the product was previously bought by the customer. Documents can also be used for this.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Available</Name>
+            <Type>bit</Type>
+            <Default>False</Default>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Indicates whether the product can be viewed/purchased by the customer.
+Replaced by `AvailableTypeID`.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>Favorite</Name>
+            <Type>bit</Type>
+            <Default>False</Default>
+            <IsObsolete>True</IsObsolete>
+        </Field>
+        <Field>
+            <Name>AvailableTypeID</Name>
+            <Type>byte</Type>
+            <Default>0</Default>
+            <Description><![CDATA[
+Indicates the availability of a product for the given customer.
+- `0`: Not available.
+- `1`: Is available.
+- `3`: Exclusively available for customers with this value; implicitly not available for other customers.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

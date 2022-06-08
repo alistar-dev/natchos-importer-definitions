@@ -1,0 +1,27 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field iskey="1">
+            <Name>CustomerCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>PhoneNumberTypeID</Name>
+            <IsRequired>True</IsRequired>
+            <Type>tinyint</Type>
+            <FixedValueList>
+                <Value>1</Value>
+                <Value>2</Value>
+                <Value>3</Value>
+            </FixedValueList>
+            <Description>Values: `1` = phone; `2` = fax; `3` = mobile.</Description>
+        </Field>
+        <Field>
+            <Name>PhoneNumber</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>50</MaximumLength>
+        </Field>
+    </Fields>
+</FileDefinition>

@@ -1,0 +1,54 @@
+<FileDefinition version="2">
+    <Description>Defines a possible value for a property.</Description>
+    <Fields>
+        <Field iskey="1">
+            <Name>PropertyCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>PropertyValueCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+            <Description>Code of the property value. This should be unique across all property value records.
+            </Description>
+        </Field>
+        <Field>
+            <Name>TextValue</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>1000</MaximumLength>
+            <Description><![CDATA[
+Display text of the property value.
+
+For properties defined as text: This value is used if no translations are provided via `PropertyValueML`
+entity.
+
+For properties defined as numeric: This is used for display and optionally for inclusion in search index
+(see property definition), e.g. '10 cm' as text value and '10' as numeric value.
+
+For properties defined as boolean: This must contains one of the follow values: `1`, `true`, `0`,
+`false`.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>NumericValue</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>3</Scale>
+            <Description><![CDATA[
+Numerical value for the property.
+
+Required if the value type of the property is numeric.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Misc</Name>
+            <Type>xml</Type>
+            <MaximumLength>10000</MaximumLength>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>

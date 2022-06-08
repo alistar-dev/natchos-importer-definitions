@@ -1,0 +1,37 @@
+<FileDefinition version="2">
+    <Fields>
+        <Field iskey="1">
+            <Name>WarehouseCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>ProductCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>StockDate</Name>
+            <Type>nvarchar</Type>
+            <MaximumLength>10</MaximumLength>
+            <Description>Can be used for expected / forecasted stock.</Description>
+        </Field>
+        <Field>
+            <Name>Stock</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>4</Scale>
+            <Description>Actual stock count; see `StockIndication` for an alternative.</Description>
+        </Field>
+        <Field>
+            <Name>StockIndication</Name>
+            <Type>nvarchar</Type>
+            <Description><![CDATA[
+A relative stock indication, e.g. BACKORDER, LOW, MEDIUM, HIGH; see `Stock` for an alternative.
+            ]]></Description>
+        </Field>
+        <Field builtintype="Action"/>
+    </Fields>
+</FileDefinition>
