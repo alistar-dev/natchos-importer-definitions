@@ -1,5 +1,7 @@
 import glob
 from xml.dom import minidom
+from datetime import datetime
+
 
 infolder = "./FileDefinitions"
 outfile = "index.html"
@@ -183,6 +185,10 @@ if __name__ == "__main__":
         body += generate(file)
 
     html = html.replace("{body}", body)
+
+# get current date and time
+    current_date_and_time = datetime.now()
+    html = html.replace("{generated_at}", current_date_and_time.strftime("%Y-%m-%d %H:%M"))
 
     with open(outfile, "w") as fo:
         fo.write(html)
