@@ -1,7 +1,6 @@
 import glob
 from xml.dom import minidom
 
-infolder = "xml_technicel"
 infolder = "./FileDefinitions"
 outfile = "index.html"
 html_template = "template.html"
