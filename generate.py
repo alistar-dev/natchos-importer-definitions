@@ -71,13 +71,14 @@ def generate(filename):
     html += "\r\n"
 
     html += "<table class='ms-table'>"
-    html += "<tr><th class='ms-text-left'>Field Name</th><th class='ms-text-center'>Key Field</th><th class='ms-text-center'>Required</th><th class='ms-text-center'>Type</th><th class='ms-text-center'>Max. Length </th></tr>"
+    html += "<tr><th class='ms-text-left'>Field Name</th><th class='ms-text-center'>Key Field</th><th class='ms-text-center'>Required</th><th class='ms-text-center'>Obsolete</th><th class='ms-text-center'>Type</th><th class='ms-text-center'>Max. Length </th></tr>"
     mydoc = minidom.parse(filename)
     fields = mydoc.getElementsByTagName('Field')
 
     for field in fields:
         name = get_value(field, "Name")
         isreq = get_value(field, "IsRequired")
+        isobs = get_value(field, "IsObsolete")
         typee = get_value(field, "Type")
         prec = get_value(field, "Precision")
         scale = get_value(field, "Scale")
@@ -95,6 +96,7 @@ def generate(filename):
         tr += f"<td class='ms-text-left'>{string_value(name)}</td>"
         tr += f"<td class='ms-text-center'>{bool_value(iskey)}</td>"
         tr += f"<td class='ms-text-center'>{bool_value(isreq)}</td>"
+        tr += f"<td class='ms-text-center'>{bool_value(isobs)}</td>"
         tr += f"<td class='ms-text-center'>{string_value(typee)}</td>"
         tr += f"<td class='ms-text-center'>{int_value(maxl)}</td>"
         tr += "</tr>"
