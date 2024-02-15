@@ -150,7 +150,7 @@ def generate(filename):
 
         if len(fixeds) > 0:
             html += "<p>"
-            html += "<h6>Allowed Values</h6>"
+            html += "<b>Allowed Values</b>"
             for ix, alt in enumerate(fixeds):
                 #if ix != 0:
                 #    html += ", "
