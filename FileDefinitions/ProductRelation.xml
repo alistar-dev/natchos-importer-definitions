@@ -12,22 +12,8 @@
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>50</MaximumLength>
-            <FixedValueList>
-                <Value>Basic</Value>
-                <Value>SuggestedIncludes</Value>
-                <Value>CustomersWhoBoughtThisAlsoBought</Value>
-                <Value>FrequentlyBoughtTogetherWith</Value>
-                <Value>HasAccessory</Value>
-                <Value>HasAlternative</Value>
-                <Value>IsInSameSeries</Value>
-                <Value>IsModelOf</Value>
-                <Value>IsReplacementOf</Value>
-                <Value>IsVariantOf</Value>
-                <Value>MandatoryIncludes</Value>
-                <Value>Replacement</Value>
-                <Value>TemporaryHasAlternative</Value>
-            </FixedValueList>
-            <Description><![CDATA[
+            <Description>
+                <![CDATA[
 Values supported by NatchOS:
 
 - `Basic`: The related product has a basic relation to the origin product, without any specific meaning.
@@ -43,6 +29,9 @@ Values supported by NatchOS:
 - `MandatoryIncludes`: The related product is mandatory included in a sale of origin product.
 - `Replacement`: The related product is a replacement for the origin product. This is the opposite of `IsReplacementOf`.
 - `TemporaryHasAlternative`: Time bound (by range) version of HasAlternative.
+- `ContainsSubassembly`: The related product is a subassembly of the origin product. I.e. a BOM definition, the product that is bought is composed out of several other related products.
+
+You implementation may support additional values. Contact us for more information.
     ]]></Description>
         </Field>
         <Field iskey="1">
@@ -66,6 +55,16 @@ Required for time-bound relations (`TemporaryHasAlternative`). Must be empty for
             <MaximumLength>10</MaximumLength>
             <Description><![CDATA[
 Required for time-bound relations (`TemporaryHasAlternative`). Must be empty for other relations.
+            ]]></Description>
+        </Field>
+        <Field>
+            <Name>Ratio</Name>
+            <Type>decimal</Type>
+            <Precision>19</Precision>
+            <Scale>6</Scale>
+            <Description><![CDATA[
+The optional count of related product for every origin product.
+I.e. A value of `2` for a `MandatoryIncludes` relation specifies that the related product must be bought 2x for every origin product.
             ]]></Description>
         </Field>
         <Field>

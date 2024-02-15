@@ -1,6 +1,11 @@
 <FileDefinition version="2">
     <Description><![CDATA[
-Defines measurements for products. This is the preferred alternative to some measurement fields in the `Product` entity.
+Defines measurements for products. 
+
+This is the preferred structure for measurements of the `Product` entity.
+Offers more measurement than what was previously support in the `Product` entity directly. 
+
+Introduced in March 2022.
     ]]></Description>
     <Fields>
         <Field iskey="1">

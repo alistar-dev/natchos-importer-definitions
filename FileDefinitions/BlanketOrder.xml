@@ -38,6 +38,18 @@
             <Type>xml</Type>
             <MaximumLength>4000</MaximumLength>
         </Field>
-        <Field builtintype="Action"/>
+
+		<Field>
+			<Name>StoreID</Name>
+			<Type>smallint</Type>
+		</Field>
+
+		<Field>
+			<Name>ContactPersonCode</Name>
+			<Type>nvarchar</Type>
+			<MaximumLength>150</MaximumLength>
+		</Field>
+
+		<Field builtintype="Action"/>
     </Fields>
 </FileDefinition>

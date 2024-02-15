@@ -5,6 +5,13 @@
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+The customer that the person is attached to.
+
+This field was marked optional in December 2023. 
+Consider the entity `WebRoleCustomerPerson` for linking a person to a customer (which support a multi-customer setup).
+If you are currently not sending any data in this field and using a separate file, you can safely remove it.
+            ]]></Description>
         </Field>
         <Field>
             <Name>ShippingAddressCode</Name>
@@ -169,11 +176,14 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
         </Field>
         <Field>
             <Name>WebRoleCode</Name>
-            <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>
             <Description><![CDATA[
-A single code or the value `MULTIPLE` if a WebRolePerson.txt file is supplied with many-to-many combinations.
+A single web role code. 
+
+This field was marked optional in December 2023. 
+Instead of a single code, we recommend the `WebRoleCustomerPerson.txt` file (previously `WebRolePerson.txt`) with support for many-to-many combinations.
+If you are currently not sending any data in this field and using a separate file, you can safely remove it.
             ]]></Description>
         </Field>
         <Field>

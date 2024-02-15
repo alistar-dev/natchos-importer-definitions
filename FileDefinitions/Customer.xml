@@ -78,12 +78,22 @@ More info at [www.iso.org](https://www.iso.org/iso-3166-country-codes.html).
             <Type>nvarchar</Type>
             <MaximumLength>50</MaximumLength>
             <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Telephone numbers must be sent in a separate file.
+
+If you are currently not sending any data in this field or are already sending a separate file, you can safely remove this field.
+      ]]></Description>
         </Field>
         <Field>
             <Name>FaxNo</Name>
             <Type>nvarchar</Type>
             <MaximumLength>50</MaximumLength>
             <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Telephone numbers must be sent in a separate file.
+
+If you are currently not sending any data in this field or are already sending a separate file, you can safely remove this field.
+      ]]></Description>
         </Field>
         <Field>
             <Name>OurAccountNo</Name>
@@ -261,8 +271,41 @@ This code must be sent back to update data accordingly.
             <Description>Default: `1` = Owner of the site, `2` = Normal Customer.</Description>
         </Field>
         <Field>
+            <Name>Credit</Name>
+            <Type>json</Type>
+            <MaximumLength>4000</MaximumLength>
+            <Description><![CDATA[
+JSON representation of the credit information. 
+
+Contains a list of `creditLimits` defined as time-based total amount and/or single basket amount:
+
+- `limitAction` [values: `Approval` or `Block`] (required)
+- `periodUnit` [`D`, `W`, `M` or `Y`], `periodCount`, `periodMaximumAmount` (optional as a set, all required if any field specified) 
+- `basketMaximumAmount` (optional)
+- `personCode` (optional)
+
+Optional custom data can be added as `customData` to the root or in the individual items. Example of the value:
+```
+{"creditLimits":[{"periodUnit": "D","periodCount": 9,"limitAction":"Approval","periodMaximumAmount": 15000.0,"basketMaximumAmount": 1000.0,"personCode": "KHIUH569","customData": null}],"customData": null}
+```
+
+Make sure the field uses the recommended text qualifier around the value and characters are escaped (i.e. double quotes must be escaped if using the default text qualifier).
+            ]]></Description>
+        </Field>
+        <Field>
             <Name>Misc</Name>
             <Type>xml</Type>
+            <MaximumLength>4000</MaximumLength>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Use JSON in `Miscellaneous` instead. JSON support was added in March 2023. 
+
+If you are currently not sending any data in this field, you can safely remove it. Contact us for more information regarding this change because it might have impact on your implementation.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>Miscellaneous</Name>
+            <Type>json</Type>
             <MaximumLength>4000</MaximumLength>
         </Field>
         <Field builtintype="Action"/>

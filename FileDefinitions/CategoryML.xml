@@ -32,7 +32,7 @@
         <Field>
             <Name>MiscML</Name>
             <Type>xml</Type>
-            <MaximumLength>10000</MaximumLength>
+            <MaximumLength>4000</MaximumLength>
         </Field>
         <Field>
             <Name>Synonymlist</Name>

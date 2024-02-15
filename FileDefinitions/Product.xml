@@ -29,7 +29,10 @@
             <Description><![CDATA[
 Specify the code of a unit of measure as defined in the metadata.
 
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it. 
       ]]></Description>
         </Field>
         <Field>
@@ -72,7 +75,10 @@ Alternatively, a size can be specified as a measurement with a decimal value and
             <Scale>6</Scale>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -81,7 +87,10 @@ Consider using `Properties` or `ProductMeasurement` instead.
             <MaximumLength>150</MaximumLength>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -145,7 +154,10 @@ renamed International Article Number even though the abbreviation EAN has been r
             <Scale>6</Scale>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -155,7 +167,10 @@ Consider using `Properties` or `ProductMeasurement` instead.
             <Description>Specify the code of a unit of measure as defined in the metadata.</Description>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -165,7 +180,10 @@ Consider using `Properties` or `ProductMeasurement` instead.
             <Scale>6</Scale>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -175,7 +193,10 @@ Consider using `Properties` or `ProductMeasurement` instead.
             <Description>Specify the code of a unit of measure as defined in the metadata.</Description>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -185,7 +206,10 @@ Consider using `Properties` or `ProductMeasurement` instead.
             <Scale>6</Scale>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -195,7 +219,10 @@ Consider using `Properties` or `ProductMeasurement` instead.
             <Description>Specify the code of a unit of measure as defined in the metadata.</Description>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Consider using `Properties` or `ProductMeasurement` instead.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
+
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -248,9 +275,10 @@ More info at [www.iso.org](https://www.iso.org/iso-3166-country-codes.html).
             <MaximumLength>150</MaximumLength>
             <IsObsolete>True</IsObsolete>
             <Description><![CDATA[
-Specify the code of a unit of measure as defined in the metadata.
+This data should be sent in the `ProductMeasurement` file instead.
+Contact us for more information regarding this change.
 
-Consider using `Properties` or `ProductMeasurement` instead.
+If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
         </Field>
         <Field>
@@ -260,7 +288,7 @@ Consider using `Properties` or `ProductMeasurement` instead.
         </Field>
         <Field>
             <Name>PromoTypeID</Name>
-            <Type>bit</Type>
+            <Type>byte</Type>
             <Description><![CDATA[
 Specify the ID of a promotion type as defined in the metadata.
 
@@ -292,6 +320,11 @@ Custom types should have a value greater than 100.
             <Name>Product_TransferLeadTimeInDays</Name>
             <IsRequired>False</IsRequired>
             <Type>smallint</Type>
+        </Field>
+        <Field>
+            <Name>IsConfigurable</Name>
+            <Type>bit</Type>
+            <Default>0</Default>
         </Field>
         <Field>
             <Name>Misc</Name>

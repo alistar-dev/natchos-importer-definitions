@@ -60,6 +60,7 @@ Custom types should have a value greater than 100.
         <Field>
             <Name>Miscellaneous</Name>
             <Type>json</Type>
+            <MaximumLength>4000</MaximumLength>
         </Field>
         <Field builtintype="Action"/>
     </Fields>

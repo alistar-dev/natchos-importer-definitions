@@ -89,8 +89,8 @@ Defines how `MaxAmount` is applied.
             <Type>bit</Type>
         </Field>
         <Field>
-            <Name>Misc</Name>
-            <Type>xml</Type>
+            <Name>Miscellaneous</Name>
+            <Type>nvarchar</Type>
             <MaximumLength>4000</MaximumLength>
         </Field>
         <Field builtintype="Action"/>

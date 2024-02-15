@@ -20,32 +20,45 @@
         </Field>
         <Field>
             <Name>Ordered</Name>
-            <IsRequired>True</IsRequired>
             <Type>bit</Type>
             <Description><![CDATA[
+*Replaced by data in `DocumentLine`. NatchOS can now automatically infer this from document data. Field has been marked obsolete in November 2023.*
+
+If you are currently not sending any data in this field, you can safely remove it.
+
 Indicates whether the product was previously bought by the customer. Documents can also be used for this.
             ]]></Description>
+            <IsObsolete>True</IsObsolete>
         </Field>
         <Field>
             <Name>Available</Name>
             <Type>bit</Type>
-            <Default>False</Default>
-            <IsObsolete>True</IsObsolete>
+            <Default>0</Default>
             <Description><![CDATA[
+*Replaced by `AvailableTypeID`. Field has been marked obsolete in April 2020.*
+
+If you are currently not sending any data in this field, you can safely remove it.
+
 Indicates whether the product can be viewed/purchased by the customer.
-Replaced by `AvailableTypeID`.
       ]]></Description>
+            <IsObsolete>True</IsObsolete>
         </Field>
         <Field>
             <Name>Favorite</Name>
             <Type>bit</Type>
-            <Default>False</Default>
+            <Default>0</Default>
+            <Description><![CDATA[
+*Master data should not control the favorites per customer. Field has been marked obsolete in November 2023. *
+
+The implementation takes care of storing favorites per person.
+
+If you are currently not sending any data in this field, you can safely remove it.
+      ]]></Description>
             <IsObsolete>True</IsObsolete>
         </Field>
         <Field>
             <Name>AvailableTypeID</Name>
             <Type>byte</Type>
-            <Default>0</Default>
             <Description><![CDATA[
 Indicates the availability of a product for the given customer.
 - `0`: Not available.

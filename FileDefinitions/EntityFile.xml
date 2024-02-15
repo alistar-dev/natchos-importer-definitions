@@ -1,6 +1,6 @@
 <FileDefinition version="2">
     <Description><![CDATA[
-Defines a link between a physical file that was uploaded and an entity.
+Defines a link between a physical file (URL to an image, pdf, ...) and an entity.
 Replace `entity` in `entity_file.txt` by the actual entity name, e.g. `product_file.txt`.
 Supported entities: Person, Customer, DocumentHeader, Product, Category, Warehouse.
   ]]></Description>
@@ -21,20 +21,24 @@ Supported entities: Person, Customer, DocumentHeader, Product, Category, Warehou
         </Field>
         <Field iskey="1">
             <Name>FilePath</Name>
+            <PreferredHeaderName>FileType</PreferredHeaderName>
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>128</MaximumLength>
             <Description><![CDATA[
 This determines the file type and must be a known value within NatchOS, configured by Natch.
 
-**A `FileType` for External storage (preferred):**
-  No restrictions. E.g. `\categoryimage`, `\productimage`, `\producthighresolution`, `ProductManualLink`.
+_Value as Path_
+Must start with `\`.
+The value is used to create the absolute URL from the relative URL. 
+Can match a container name in Azure Blob Storage or a bucket name in Amazon S3.
+E.g. `\categoryimage`, `\productimage`, `\product-high-resolution`
 
-**A `FilePath` for SQL storage (legacy):**
-  The path of the file without the filename.
-  A leading \ is mandatory, a trailing \ is not allowed.
-  Only one level is allowed.
-  E.g. `\productimages`, `\brandlogo`.
+_Value as Type_
+Value does not start with `\`.
+The value is only used to indicate/match a type in NathOS.
+Will not be used to create the absolute URL - the `URL` field must contain absolute URL. 
+E.g. `ProductManualLink`.
       ]]></Description>
             <AltHeaderNames>
                 <Value>FileType</Value>
@@ -42,16 +46,26 @@ This determines the file type and must be a known value within NatchOS, configur
         </Field>
         <Field iskey="1">
             <Name>FileName</Name>
+            <PreferredHeaderName>URL</PreferredHeaderName>
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>1024</MaximumLength>
             <Description><![CDATA[
-**A `URL` for External storage (preferred):**
-  An absolute or relative URL. e.g. `https://pim.natch.be/products/thumbnails/x123987.jpg` or `/products/thumbnails/x123987.jpg`.
+**A relative or absolute `URL` to the file.**
 
-**A `FileName` for SQL storage (legacy):**
-  The name or path of the file, e.g. `x123-specs-nl.pdf`.
-  This may include a path relative to FilePath, e.g. `group-a\type-b\productsheet-x123.jpg`.
+_Relative_
+A path relative to the `FilePath\FileType`. 
+The value will be prefixed with `Origin` and `FilePath` to construct the absolute URL.  
+The `Origin` itself is configured in the application.
+
+Examples (using `\categoryimage` as `FilePath\FileType`):
+- `/segment-a/x123987.jpg` > `https://natchcloud.com/categoryimage/segment-a/x123987.jpg`
+- `/x123987.jpg` > `https://natchcloud.com/categoryimage/x123987.jpg`
+
+_Absolute_
+A complete URL, including the origin. The value will be used as-is.
+E.g. `https://pim.natch.be/products/thumbnails/x123987.jpg`
+  
       ]]></Description>
             <AltHeaderNames>
                 <Value>URL</Value>

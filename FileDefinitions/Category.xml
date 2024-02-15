@@ -69,7 +69,7 @@ The optional weight of the category to calculate the score in search results of 
         <Field>
             <Name>Misc</Name>
             <Type>xml</Type>
-            <MaximumLength>10000</MaximumLength>
+            <MaximumLength>4000</MaximumLength>
         </Field>
         <Field builtintype="Action"/>
     </Fields>

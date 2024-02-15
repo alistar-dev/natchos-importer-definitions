@@ -24,8 +24,8 @@
             <Description>The locale identifier, e.g. `2067` for Dutch (Belgium) [nl-BE].</Description>
         </Field>
         <Field>
-            <Name>MiscML</Name>
-            <Type>xml</Type>
+            <Name>MiscellaneousML</Name>
+            <Type>nvarchar</Type>
             <MaximumLength>4000</MaximumLength>
         </Field>
     </Fields>

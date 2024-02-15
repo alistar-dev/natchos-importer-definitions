@@ -1,11 +1,16 @@
 <FileDefinition version="2">
-    <Description>
-        This structure is *obsolete* and is replaced by `WebRoleCustomerPerson`.
-        Link between a person and a web role the person belongs to. A person can have multiple web roles.
+    <Description>Link between a person and a web role the person belongs to for a given customer. A person can have
+        multiple web roles and be linked to multiple customers.
     </Description>
     <Fields>
         <Field iskey="1">
             <Name>WebRoleCode</Name>
+            <IsRequired>True</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field iskey="1">
+            <Name>CustomerCode</Name>
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>

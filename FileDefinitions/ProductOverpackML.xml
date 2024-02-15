@@ -27,6 +27,17 @@
             <Name>MiscML</Name>
             <Type>xml</Type>
             <MaximumLength>4000</MaximumLength>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Use JSON in `MiscellaneousML` instead. JSON support was added in September 2023. 
+
+If you are currently not sending any data in this field, you can safely remove it. Contact us for more information regarding this change because it might have impact on your implementation.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>MiscellaneousML</Name>
+            <Type>json</Type>
+            <MaximumLength>4000</MaximumLength>
         </Field>
     </Fields>
 </FileDefinition>

@@ -28,6 +28,18 @@ Caution: Action field only supports `I` or `D`, not `U`.
             <Name>Misc</Name>
             <Type>xml</Type>
             <MaximumLength>10000</MaximumLength>
+            <IsObsolete>True</IsObsolete>
+            <Description><![CDATA[
+Use JSON in `Miscellaneous` instead. JSON support was added in November 2022. 
+
+If you are currently not sending any data in this field, you can safely remove it. 
+Contact us for more information regarding this change because it might have impact on your implementation.
+      ]]></Description>
+        </Field>
+        <Field>
+            <Name>Miscellaneous</Name>
+            <Type>json</Type>
+            <MaximumLength>4000</MaximumLength>
         </Field>
         <Field builtintype="Action"/>
     </Fields>

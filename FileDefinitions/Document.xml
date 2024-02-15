@@ -38,8 +38,12 @@ Supported values:
         </Field>
         <Field>
             <Name>SellToCustomerCode</Name>
+            <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>
+            <Description><![CDATA[
+Field has been marked required in January 2024.
+      ]]></Description>
         </Field>
         <Field>
             <Name>SellToCustomerName</Name>
@@ -515,6 +519,18 @@ added as `customData` to the root or in the individual tracking items. Example o
 ```
 Make sure the field uses the recommended text qualifier around the value and characters are escaped (i.e. double quotes must be escaped if using the default text qualifier).
             ]]></Description>
+        </Field>
+        <Field>
+            <Name>TransferTypeCode</Name>
+            <IsRequired>False</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
+        </Field>
+        <Field>
+            <Name>TransferSubTypeCode</Name>
+            <IsRequired>False</IsRequired>
+            <Type>nvarchar</Type>
+            <MaximumLength>150</MaximumLength>
         </Field>
         <Field builtintype="Action"/>
     </Fields>
