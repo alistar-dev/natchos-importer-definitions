@@ -78,6 +78,7 @@ More info at [www.iso.org](https://www.iso.org/iso-3166-country-codes.html).
             <Type>nvarchar</Type>
             <MaximumLength>50</MaximumLength>
             <IsObsolete>True</IsObsolete>
+            <ReportObsoleteField>True</ReportObsoleteField>
             <Description><![CDATA[
 Telephone numbers must be sent in a separate file.
 
@@ -89,6 +90,7 @@ If you are currently not sending any data in this field or are already sending a
             <Type>nvarchar</Type>
             <MaximumLength>50</MaximumLength>
             <IsObsolete>True</IsObsolete>
+            <ReportObsoleteField>True</ReportObsoleteField>
             <Description><![CDATA[
 Telephone numbers must be sent in a separate file.
 
@@ -297,6 +299,7 @@ Make sure the field uses the recommended text qualifier around the value and cha
             <Type>xml</Type>
             <MaximumLength>4000</MaximumLength>
             <IsObsolete>True</IsObsolete>
+            <ReportObsoleteField>False</ReportObsoleteField>
             <Description><![CDATA[
 Use JSON in `Miscellaneous` instead. JSON support was added in March 2023. 
 

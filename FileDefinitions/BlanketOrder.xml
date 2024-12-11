@@ -24,13 +24,13 @@
         </Field>
         <Field>
             <Name>StartDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
             <Name>EndDate</Name>
             <IsRequired>True</IsRequired>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>

@@ -29,19 +29,7 @@ If you are currently not sending any data in this field, you can safely remove i
 Indicates whether the product was previously bought by the customer. Documents can also be used for this.
             ]]></Description>
             <IsObsolete>True</IsObsolete>
-        </Field>
-        <Field>
-            <Name>Available</Name>
-            <Type>bit</Type>
-            <Default>0</Default>
-            <Description><![CDATA[
-*Replaced by `AvailableTypeID`. Field has been marked obsolete in April 2020.*
-
-If you are currently not sending any data in this field, you can safely remove it.
-
-Indicates whether the product can be viewed/purchased by the customer.
-      ]]></Description>
-            <IsObsolete>True</IsObsolete>
+            <ReportObsoleteField>True</ReportObsoleteField>
         </Field>
         <Field>
             <Name>Favorite</Name>
@@ -55,6 +43,7 @@ The implementation takes care of storing favorites per person.
 If you are currently not sending any data in this field, you can safely remove it.
       ]]></Description>
             <IsObsolete>True</IsObsolete>
+            <ReportObsoleteField>True</ReportObsoleteField>
         </Field>
         <Field>
             <Name>AvailableTypeID</Name>

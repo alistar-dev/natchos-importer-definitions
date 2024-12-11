@@ -29,6 +29,7 @@ Caution: Action field only supports `I` or `D`, not `U`.
             <Type>xml</Type>
             <MaximumLength>10000</MaximumLength>
             <IsObsolete>True</IsObsolete>
+            <ReportObsoleteField>False</ReportObsoleteField>
             <Description><![CDATA[
 Use JSON in `Miscellaneous` instead. JSON support was added in November 2022. 
 

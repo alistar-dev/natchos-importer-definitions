@@ -1,11 +1,12 @@
 <FileDefinition version="2">
     <Description><![CDATA[
-Defines measurements for products. 
+This structure has been marked *OBSOLETE* in October 2024.**
 
-This is the preferred structure for measurements of the `Product` entity.
-Offers more measurement than what was previously support in the `Product` entity directly. 
+For products: use properties (`Property`) and property values (`PropertyValue`) instead.
 
-Introduced in March 2022.
+For overpacks: use fields in the `Overpack` structure instead. 
+    
+Defines measurements for products/overpacks. 
     ]]></Description>
     <Fields>
         <Field iskey="1">

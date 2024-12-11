@@ -75,7 +75,7 @@ Supported values:
         </Field>
         <Field>
             <Name>ShipmentDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
@@ -86,7 +86,7 @@ Supported values:
         <Field>
             <Name>ProductName</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>Comment</Name>
@@ -200,22 +200,22 @@ Supported values:
         </Field>
         <Field>
             <Name>RequestedDeliveryDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
             <Name>PromisedDeliveryDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
             <Name>PlannedDeliveryDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
             <Name>PlannedShipmentDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>

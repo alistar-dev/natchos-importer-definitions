@@ -61,6 +61,7 @@
             <Type>xml</Type>
             <MaximumLength>4000</MaximumLength>
             <IsObsolete>True</IsObsolete>
+            <ReportObsoleteField>False</ReportObsoleteField>
             <Description><![CDATA[
 Use JSON in `Miscellaneous` instead. JSON support was added in September 2023. 
 

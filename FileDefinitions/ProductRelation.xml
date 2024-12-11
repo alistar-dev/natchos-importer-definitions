@@ -43,7 +43,7 @@ You implementation may support additional values. Contact us for more informatio
         </Field>
         <Field>
             <Name>StartDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
             <Description><![CDATA[
 Required for time-bound relations (`TemporaryHasAlternative`). Must be empty for other relations.
@@ -51,7 +51,7 @@ Required for time-bound relations (`TemporaryHasAlternative`). Must be empty for
         </Field>
         <Field>
             <Name>StopDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
             <Description><![CDATA[
 Required for time-bound relations (`TemporaryHasAlternative`). Must be empty for other relations.

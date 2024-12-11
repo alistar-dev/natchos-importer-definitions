@@ -2,7 +2,6 @@
     <Fields>
         <Field>
             <Name>CustomerCode</Name>
-            <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>
             <Description><![CDATA[

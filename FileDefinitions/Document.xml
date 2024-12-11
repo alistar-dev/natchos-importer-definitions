@@ -49,12 +49,12 @@ Field has been marked required in January 2024.
             <Name>SellToCustomerName</Name>
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>SellToCustomerName2</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>SellToCustomerEmail</Name>
@@ -124,7 +124,7 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
         <Field>
             <Name>SellToCustomerContactName</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>VATRegistrationNo</Name>
@@ -140,12 +140,12 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
             <Name>BillToCustomerName</Name>
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>BillToCustomerName2</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>BillToCustomerEmail</Name>
@@ -218,7 +218,7 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
         <Field>
             <Name>BillToCustomerContactName</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>ShippingAddressCode</Name>
@@ -228,12 +228,12 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
         <Field>
             <Name>ShippingAddressName</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>ShippingAddressName2</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>ShippingAddressEmail</Name>
@@ -296,7 +296,7 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
         <Field>
             <Name>ShippingAddressContactName</Name>
             <Type>nvarchar</Type>
-            <MaximumLength>80</MaximumLength>
+            <MaximumLength>128</MaximumLength>
         </Field>
         <Field>
             <Name>ShippingMethodCode</Name>
@@ -332,7 +332,7 @@ Supported values:
         <Field>
             <Name>DocumentDate</Name>
             <IsRequired>True</IsRequired>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
@@ -398,12 +398,12 @@ More info at [www.iso.org](https://www.iso.org/iso-4217-currency-codes.html).
         </Field>
         <Field>
             <Name>RequestedDeliveryDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
             <Name>PromisedDeliveryDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
         </Field>
         <Field>
@@ -423,6 +423,7 @@ More info at [www.iso.org](https://www.iso.org/iso-4217-currency-codes.html).
             <Name>DocumentStatusCode</Name>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>
+            <Description>**Required** for document type `order`.</Description>
         </Field>
         <Field>
             <Name>Open</Name>
@@ -436,15 +437,15 @@ More info at [www.iso.org](https://www.iso.org/iso-4217-currency-codes.html).
         </Field>
         <Field>
             <Name>QuoteEndDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
-            <Description>Required for document type quote.</Description>
+            <Description>**Required** for document type `quote`.</Description>
         </Field>
         <Field>
             <Name>OrderTypeID</Name>
             <Type>tinyint</Type>
             <Description><![CDATA[
-Required for document type order.
+**Required** for document type `order`.
 Supported values:
 - `1` = Normal
 - `2` = Return
@@ -452,9 +453,9 @@ Supported values:
         </Field>
         <Field>
             <Name>OrderDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
-            <Description>Required for document type order.</Description>
+            <Description>**Required** for document type `order`.</Description>
         </Field>
         <Field>
             <Name>OrderTime</Name>
@@ -463,9 +464,9 @@ Supported values:
         </Field>
         <Field>
             <Name>ShipmentDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
-            <Description>Required for document type shipment.</Description>
+            <Description>**Required** for document type `shipment`.</Description>
         </Field>
         <Field>
             <Name>ShipmentTime</Name>
@@ -480,11 +481,9 @@ Supported values:
         </Field>
         <Field>
             <Name>DueDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
-            <Description>
-                Required for document type invoice.
-            </Description>
+            <Description>**Required** for document type `invoice`.</Description>
         </Field>
         <Field>
             <Name>InvoiceTypeID</Name>
@@ -494,7 +493,7 @@ Supported values:
                 <Value>2</Value>
             </FixedValueList>
             <Description><![CDATA[
-Required for document type invoice.
+**Required** for document type `invoice`.
 Supported values:
 - `1` = Invoice
 - `2` = Credit note            
@@ -504,7 +503,7 @@ Supported values:
             <Name>StoreID</Name>
             <Type>smallint</Type>
             <Default>1</Default>
-            <Description>Required for multi-store environments.</Description>
+            <Description>**Required** for multi-store environments.</Description>
         </Field>
         <Field>
             <Name>TrackTrace</Name>

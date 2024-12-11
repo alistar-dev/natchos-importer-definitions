@@ -14,7 +14,7 @@
         </Field>
         <Field iskey="1">
             <Name>StockDate</Name>
-            <Type>nvarchar</Type>
+            <Type>date</Type>
             <MaximumLength>10</MaximumLength>
             <Description>Can be used for expected / forecasted stock.</Description>
         </Field>

@@ -52,6 +52,7 @@ Values supported by NatchOS:
 - `2` = liquidation
 - `3` = spotlight
 - `4` = bestseller
+- `5` = new product
 
 Custom types should have a value greater than 100.
       ]]></Description>
