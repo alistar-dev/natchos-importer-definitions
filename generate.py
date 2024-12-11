@@ -52,7 +52,7 @@ def get_value(field, name):
 
 def entity_from_filename(filename):
     # entity = filename[filename.index("/")+1:filename.index(".")]
-    return filename.split("/")[-1].split(".")[0]
+    return filename.replace("\\", "/").split("/")[-1].split(".")[0]
 
 def generate_menu(filenames):
     html = "<p>"
