@@ -30,6 +30,7 @@ Values supported by NatchOS:
 - `Replacement`: The related product is a replacement for the origin product. This is the opposite of `IsReplacementOf`.
 - `TemporaryHasAlternative`: Time bound (by range) version of HasAlternative.
 - `ContainsSubassembly`: The related product is a subassembly of the origin product. I.e. a BOM definition, the product that is bought is composed out of several other related products.
+- `HasCheaperAlternative`: The related product is a cheaper alternative to the original product.
 
 You implementation may support additional values. Contact us for more information.
     ]]></Description>

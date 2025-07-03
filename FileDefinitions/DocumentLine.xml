@@ -250,5 +250,11 @@ added as `customData` to the root or in the individual tracking items. Example o
 Make sure the field uses the recommended text qualifier around the value and characters are escaped (i.e. double quotes must be escaped if using the default text qualifier).
             ]]></Description>
         </Field>
-    </Fields>
+		<Field>
+			<Name>BasketHeaderID</Name>
+			<IsRequired>False</IsRequired>
+			<Type>int</Type>
+			<Description>The ID of the associated basket.</Description>
+		</Field>
+	</Fields>
 </FileDefinition>

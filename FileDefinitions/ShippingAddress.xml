@@ -89,11 +89,6 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
             <MaximumLength>150</MaximumLength>
         </Field>
         <Field>
-            <Name>ShippingMethodCode</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>150</MaximumLength>
-        </Field>
-        <Field>
             <Name>ShippingAgentCode</Name>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>

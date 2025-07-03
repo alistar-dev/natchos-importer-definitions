@@ -6,10 +6,11 @@ For performance reasons this table should not contain more than 2 million record
     <Fields>
         <Field iskey="1">
             <Name>CustomerCode</Name>
-            <IsRequired>True</IsRequired>
+            <IsRequired>False</IsRequired>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>
-        </Field>
+			<Description>The code of the customer. If empty, then `CustomerPriceGroupCode` must be supplied.</Description>
+		</Field>
         <Field iskey="1">
             <Name>ProductCode</Name>
             <IsRequired>True</IsRequired>
@@ -29,11 +30,25 @@ For performance reasons this table should not contain more than 2 million record
             <Precision>19</Precision>
             <Scale>4</Scale>
         </Field>
-        <Field>
-            <Name>Misc</Name>
-            <Type>xml</Type>
-            <MaximumLength>10000</MaximumLength>
-        </Field>
-        <Field builtintype="Action"/>
+		<Field>
+			<Name>Miscellaneous</Name>
+			<Type>nvarchar</Type>
+			<MaximumLength>1024</MaximumLength>
+		</Field>
+		<Field iskey="1">
+			<Name>Currency_Iso</Name>
+			<Type>nvarchar</Type>
+			<MaximumLength>3</MaximumLength>
+			<IsRequired>False</IsRequired>
+			<Description>The currency code. This will become a required field in a future version.</Description>
+		</Field>
+		<Field iskey="1">
+			<Name>CustomerPriceGroupCode</Name>
+			<Type>nvarchar</Type>
+			<MaximumLength>150</MaximumLength>
+			<IsRequired>False</IsRequired>
+			<Description>The price group code of the customer. If empty, then `CustomerCode` must be supplied.</Description>
+		</Field>
+		<Field builtintype="Action"/>
     </Fields>
 </FileDefinition>

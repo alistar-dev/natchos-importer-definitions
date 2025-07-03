@@ -19,19 +19,6 @@
             <Description>Alternate product number by which the customer knows the product.</Description>
         </Field>
         <Field>
-            <Name>Ordered</Name>
-            <Type>bit</Type>
-            <Description><![CDATA[
-*Replaced by data in `DocumentLine`. NatchOS can now automatically infer this from document data. Field has been marked obsolete in November 2023.*
-
-If you are currently not sending any data in this field, you can safely remove it.
-
-Indicates whether the product was previously bought by the customer. Documents can also be used for this.
-            ]]></Description>
-            <IsObsolete>True</IsObsolete>
-            <ReportObsoleteField>True</ReportObsoleteField>
-        </Field>
-        <Field>
             <Name>Favorite</Name>
             <Type>bit</Type>
             <Default>0</Default>

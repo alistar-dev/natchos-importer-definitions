@@ -96,11 +96,6 @@ Field has been marked required in January 2024.
             <MaximumLength>150</MaximumLength>
         </Field>
         <Field>
-            <Name>SellToCustomerCountyCode</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>150</MaximumLength>
-        </Field>
-        <Field>
             <Name>SellToCustomerCountryISO</Name>
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
@@ -111,14 +106,6 @@ Field has been marked required in January 2024.
             <Description><![CDATA[
 The two-letter ALPHA-2 ISO 3166 notation of the country code.
 More info at [www.iso.org](https://www.iso.org/iso-3166-country-codes.html).
-            ]]></Description>
-        </Field>
-        <Field>
-            <Name>SellToCustomerSpatialLocation</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>40</MaximumLength>
-            <Description><![CDATA[
-Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.09644,3.83194` for Lochristi, Belgium. 
             ]]></Description>
         </Field>
         <Field>
@@ -193,11 +180,6 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
             <MaximumLength>150</MaximumLength>
         </Field>
         <Field>
-            <Name>BillToCustomerCountyCode</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>150</MaximumLength>
-        </Field>
-        <Field>
             <Name>BillToCustomerCountryISO</Name>
             <IsRequired>True</IsRequired>
             <Type>nvarchar</Type>
@@ -206,14 +188,6 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
                 <Value>BillToCustomerCountryIso</Value>
             </AltHeaderNames>
             <Description>The two-letter ALPHA-2 ISO 3166 notation of the country code.</Description>
-        </Field>
-        <Field>
-            <Name>BillToCustomerSpatialLocation</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>40</MaximumLength>
-            <Description><![CDATA[
-Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.09644,3.83194` for Lochristi, Belgium.
-            ]]></Description>
         </Field>
         <Field>
             <Name>BillToCustomerContactName</Name>
@@ -272,11 +246,6 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
             <MaximumLength>150</MaximumLength>
         </Field>
         <Field>
-            <Name>ShippingAddressCountyCode</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>150</MaximumLength>
-        </Field>
-        <Field>
             <Name>ShippingAddressCountryISO</Name>
             <Type>nvarchar</Type>
             <MaximumLength>2</MaximumLength>
@@ -286,22 +255,9 @@ Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.0
             <Description>The two-letter ALPHA-2 ISO 3166 notation of the country code.</Description>
         </Field>
         <Field>
-            <Name>ShippingAddressSpatialLocation</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>40</MaximumLength>
-            <Description><![CDATA[
-Coordinates in `latitude,longitude` format with `.` as decimal point, e.g. `51.09644,3.83194` for Lochristi, Belgium.
-            ]]></Description>
-        </Field>
-        <Field>
             <Name>ShippingAddressContactName</Name>
             <Type>nvarchar</Type>
             <MaximumLength>128</MaximumLength>
-        </Field>
-        <Field>
-            <Name>ShippingMethodCode</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>150</MaximumLength>
         </Field>
         <Field>
             <Name>ShippingAdviceCode</Name>
@@ -387,16 +343,6 @@ More info at [www.iso.org](https://www.iso.org/iso-4217-currency-codes.html).
             <MaximumLength>150</MaximumLength>
         </Field>
         <Field>
-            <Name>ContactMethodCode</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>150</MaximumLength>
-        </Field>
-        <Field>
-            <Name>ContactMethodDocumentNo</Name>
-            <Type>nvarchar</Type>
-            <MaximumLength>40</MaximumLength>
-        </Field>
-        <Field>
             <Name>RequestedDeliveryDate</Name>
             <Type>date</Type>
             <MaximumLength>10</MaximumLength>
@@ -410,14 +356,6 @@ More info at [www.iso.org](https://www.iso.org/iso-4217-currency-codes.html).
             <Name>DepartmentCode</Name>
             <Type>nvarchar</Type>
             <MaximumLength>150</MaximumLength>
-        </Field>
-        <Field>
-            <Name>SeparateInvoice</Name>
-            <IsRequired>True</IsRequired>
-            <Type>bit</Type>
-            <AltHeaderNames>
-                <Value>SeperateInvoice</Value>
-            </AltHeaderNames>
         </Field>
         <Field>
             <Name>DocumentStatusCode</Name>

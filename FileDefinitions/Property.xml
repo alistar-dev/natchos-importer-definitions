@@ -38,14 +38,12 @@ Data type of the value of the property:
             <Description><![CDATA[
 Filter type of the property:
 
-- `1`: Intersect --> evaluated as an `AND` operator within the property values; selecting more options
-within the property may reduce results.
-- `2`: Union --> evaluated as an `OR` operator within the property values; selecting more options within
-the property may increase results.
-- `3`: Range --> property can be filtered as a range of numerical values, defining minimum and/or
-maximum.
-
-Supported in our latest search engine.
+- `1`: Intersect --> Evaluated as an `AND` operator within the property values; selecting more options
+within the property may reduce results. Support in NatchOS search.
+- `2`: Union --> Evaluated as an `OR` operator within the property values; selecting more options within
+the property may increase results. Support in NatchOS search.
+- `3`: Range --> Property can be filtered as a range of numerical values, defining minimum and/or
+maximum. NOT SUPPORTED in default NatchOS search. Only for custom search implementations!
             ]]></Description>
             <FixedValueList>
                 <value>1</value>
